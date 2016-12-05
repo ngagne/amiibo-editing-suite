@@ -1,0 +1,30 @@
+doctype
+html.no-js
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Amiibo Hex Editing Tool by VGMoz
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/css/global.min.css')
+    body
+        div(class="container")
+            header
+                h1 Amiibo Hex Editing Tool by&nbsp;
+                    a(href="http://www.vgmoz.com/", target="_blank") VGMoz
+
+            p
+                small Looking for the&nbsp;
+                    a(href="/") Amiibo Cheat Tool?
+
+            form(action="/hex", method="post", enctype="multipart/form-data")
+                div(class="form-group")
+                    label Amiibo Dump (binary format):
+                    input(type="file", name="bin", required="required", class="form-control")
+
+                p(class="hide alert alert-info") Processing data, please wait...
+
+                p
+                    input(type="submit", value="Upload Amiibo", class="btn btn-primary")
+
+                script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+                script(src='/js/main.min.js')

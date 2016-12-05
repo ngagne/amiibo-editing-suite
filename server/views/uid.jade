@@ -1,0 +1,34 @@
+doctype
+html.no-js
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title UID Changer by VGMoz
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/css/global.min.css')
+    body
+        div(class="container")
+            header
+                h1 UID Changer by&nbsp;
+                    a(href="http://www.vgmoz.com/", target="_blank") VGMoz
+
+            p
+                small Looking for the&nbsp;
+                    a(href="/") Amiibo Cheat Tool?
+
+            form(action="/uid", method="post", enctype="multipart/form-data")
+                div(class="form-group")
+                    label Bin file:
+                    input(type="file", name="bin", required="required", class="form-control")
+
+                div(class="form-group")
+                    label UID (14 hex characters / 7 bytes):
+                    input(type="text", minlength="14", maxlength="14", name="uid", required="required", class="form-control")
+
+                p
+                    input(type="submit", value="Upload", class="btn btn-primary")
+
+                p(class="hide alert alert-info") Processing data, please wait...
+
+                script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+                script(src='/js/main.min.js')

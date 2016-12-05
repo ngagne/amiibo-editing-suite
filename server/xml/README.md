@@ -1,0 +1,1 @@
+You can download the codelist.xml file from: http://settings.powersaves.net/psa/codelist.xml

@@ -1,0 +1,35 @@
+doctype
+html.no-js
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Amiibo Hex Editing Tool by VGMoz
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='/css/global.min.css')
+    body
+        div(class="container")
+            header
+                h1 Amiibo Hex Editing Tool by&nbsp;
+                    a(href="http://www.vgmoz.com/", target="_blank") VGMoz
+
+            h3 Character: #{characterName}
+
+            form(action="/hex-edit", method="post", enctype="multipart/form-data")
+
+                p(id="hex")
+                    each offset, index in offsets
+                        input(type="text", maxlength="2", name="data[#{index}]", class="form-control", data-offset="#{index}", value="#{offset}")
+                p(class="hide alert alert-info") Processing data, please wait...
+                p
+                    input(type="hidden", id="hdnType", name="type", value="")
+                    input(type="submit", value="Download Decrypted", id="btnDecrypted", class="btn btn-primary")
+                    |&nbsp;
+                    input(type="submit", value="Download Encrypted", id="btnEncrypted", class="btn btn-primary")
+
+
+                div(id="hex-offset", class="btn btn-primary", title="Click to switch between hex/dec") Offset&nbsp;
+                    span(class="badge")
+
+
+                script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+                script(src='/js/main.min.js')
